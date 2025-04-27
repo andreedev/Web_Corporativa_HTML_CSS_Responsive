@@ -1,0 +1,347 @@
+/** estilos generales **/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+ul, li{
+    list-style: none;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* Usamos variables constantes globales mediante la pseudo clase :root que representa la raíz del documento */
+/* Las variables se declaran con la sintaxis --nombre-variable: valor; */
+/* Las variables se pueden usar en cualquier parte del CSS utilizando la funcion var(--nombre-variable) */
+/* En este caso, declaramos los colores principales de nuestra página web, los cuales se usan en el resto del código CSS */
+:root{
+    --color-amarillo: #e6c229;
+    --color-amarillo-hover: #ab932c;
+    --color-verde: #19381f;
+}
+
+/**
+* Estilos para el header **/
+.headerContainer{
+    display: flex;
+    height: 70px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilos para el logo */
+.logoContainer{
+    position: relative;
+}
+
+.logo{
+    height: 50px;
+    margin: 10px;
+}
+
+/* Configuramos una animacion con la propiedad animation */
+/* La propiedad animation: animacionLetraLogo 0.5s linear indica que la animacion se llamara animacionLetraLogo y durara 0.5 segundos con una velocidad constante (linear) */
+@media (min-width: 576px){
+    .logoContainer:hover > .letraLogo{
+        display: block;
+        animation: animacionLetraLogo 0.4s ease-in-out;
+    }
+    /** Esto permite mostrar el placeholder invisible en el hover del logo */
+    .logoContainer:hover + .placeholderLogo{
+        display: block;
+    }
+}
+
+/* Animacion de CSS para la letra del logo */
+/* La propiedad from indica el estado inicial de la animacion y to el estado final */
+/* La propiedad transform: translateX() es utilizada para mover un elemento en el eje X */
+/* La propiedad opacity: 0 indica que la letra del logo estara oculta al inicio de la animacion */
+/* La propiedad opacity: 100% indica que la letra del logo estara visible al final de la animacion */
+@keyframes animacionLetraLogo {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 100%;
+    }
+}
+
+.letraLogo{
+    position: absolute;
+    top: 27px;
+    left: 68px;
+    display: none;
+    height: 20px;
+}
+
+
+.placeholderLogo{
+    display: none;
+    min-width: 160px;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+
+.inputBuscarContainer{
+    width: 100%;
+    margin: 0px 10px;
+}
+
+.inputBuscar{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #787878;
+}
+
+.loginBtn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+@media (min-width: 576px){
+    .loginBtn{
+        padding: 10px 15px;
+    }
+}
+
+.loginIcon{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.loginBtnText{
+    display: none;
+}
+
+@media (min-width: 576px){
+    .loginBtnText{
+        display: block;
+    }
+}
+
+.navList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.navList li{
+    display: flex;
+    padding: 0px 10px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.navList li:hover{
+    color: white;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+
+@media (min-width: 576px){
+    .navList li{
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px){
+    .navList li{
+        padding: 0px 25px;
+        font-size: 16px;
+    }
+}
+
+.textCenter{
+    text-align: center;
+}
+
+/* Estilos para el formulario */
+.formulario{
+    color: var(--color-verde);
+    background-color: var(--color-amarillo);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formInput{
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: 1px solid #222;
+}
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: 1px solid #222;
+}
+.formularioContainer{
+    margin:20px;
+}
+
+/** Estilos para el contenido principal **/
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+aside{
+    width: 20%;
+    border: 1px solid #222;
+    background-color: var(--color-amarillo);
+    color: var(--color-verde);
+}
+
+aside a{
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--color-verde);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+aside a:hover{
+    background-color: var(--color-verde);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para el menu principal */
+.menuDesplegable{
+    display: flex;
+    flex-direction: column;
+}
+
+.menuDesplegable li a{
+    display:block;
+    background-color: var(--color-amarillo);
+    color:white;
+    padding: 10px 15px;
+}
+.menuDesplegable li a:hover{
+    background-color: var(--color-amarillo-hover);
+}
+.menuDesplegable > li {
+    
+}
+.menuDesplegable li ul{
+    display: none;
+    position: absolute;
+    min-width: 150px;
+}
+.menuDesplegable li:hover > ul{
+    display:block;
+}
+.menuDesplegable li ul li{
+    position:relative;
+}
+.menuDesplegable li ul li ul{
+    right:-150px;
+    top:20px;
+}
+/**/
+
+section{
+    width: 80%;
+    border: 1px solid #222;
+}
+
+/*Estilo de la página quienes somos*/
+.bodyquienessomos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--color-amarillo);
+}
+.card{
+    position: relative;
+    width:300px;
+    height:350px;
+    margin:20px;
+}
+.card .face{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+    border-radius:10px;
+    overflow:hidden;
+    transition: 0.5s;
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px black;
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .front h3{
+    position: absolute;
+    bottom:0px;
+    width: 100%;
+    height:45px;
+    line-height: 45px;
+    color:var(--color-amarillo);
+    background: var(--color-verde);
+    text-align: center;
+    z-index: 10;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: var(--color-verde);
+    padding: 15px;
+    color:var(--color-amarillo);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align:center;
+    box-shadow: 0px 5px 10px black;
+}
+.card .back h3{
+    font-size: 30px;
+    margin-top:20px;
+    letter-spacing: 2px;
+    color:var(--color-amarillo);
+}
+.card .back p{
+    color: var(--color-amarillo);
+    letter-spacing: 1px;
+}
+.card:hover .front{
+    transform:perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform:perspective(600px) rotateY(360deg);
+}

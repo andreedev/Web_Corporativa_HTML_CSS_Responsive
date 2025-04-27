@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete a nosotros</title>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="mailto:talento@cssmarket.com" class="formulario">
+        <h1 class="h1formulario">Únete al equipo de CSSMarket</h1> 
+        <div class="formularioContainer">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" class="formInput" required><br>
+            
+            <label for="direccion">Dirección:</label><br>
+            <input type="text" id="direccion" name="direccion" class="formInput" required><br>
+
+            <label for="Ciudad">Ciudad:</label><br>
+            <input type="text" id="Ciudad" name="ciudad" class="formInput" required><br>
+
+            <label for="cp">Código postal:</label><br>
+            <input type="text" id="cp" name="cp" class="formInput" required><br>
+
+            <label for="tlf">Teléfono:</label><br>
+            <input type="text" id="tlf" name="tlf" class="formInput" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" class="formInput" required><br>
+
+            <label for="cv">Adjuntar CV:</label><br>
+            <input type="file" name="cv" id="cv" value="" accept=".pdf" multiple required class="formInput"><br>
+
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="20" placeholder="Añade algo que debamos saber de ti"></textarea><br>
+
+            <input type="checkbox" name="terminos" id="terminos" class="formInput" required><label for="terminos">Acepto los <a href="#">terminos</a></label><br><br>
+            
+
+            <button type="submit" id="btnEnviar">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>
