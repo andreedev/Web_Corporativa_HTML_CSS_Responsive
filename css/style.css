@@ -25,6 +25,7 @@ a{
     --color-amarillo: #e6c229;
     --color-amarillo-hover: #ab932c;
     --color-verde: #19381f;
+    --color-verde-hover: #247333;
 }
 
 /**
@@ -190,7 +191,7 @@ a{
 }
 
 .formInput{
-    width: 300px;
+    width: auto;
     padding: 10px;
     margin: 10px 0px;
     border-radius: 5px;
@@ -204,82 +205,25 @@ textarea{
     border: 1px solid #222;
 }
 .formularioContainer{
+    position: relative;
     margin:20px;
-}
-
-/** Estilos para el contenido principal **/
-.mainContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0px 0px;
-}
-
-aside{
-    width: 20%;
-    border: 1px solid #222;
-    background-color: var(--color-amarillo);
-    color: var(--color-verde);
-}
-
-aside a{
-    display: block;
-    padding: 10px 20px;
-    border-bottom: 1px solid var(--color-verde);
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-aside a:hover{
-    background-color: var(--color-verde);
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.sectionContainer{
-
-}
-
-/* Estilos para el menu principal */
-.menuDesplegable{
-    display: flex;
+    display:flex;
     flex-direction: column;
+    justify-content: space-evenly;
+}
+.formularioTexto{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.menuDesplegable li a{
-    display:block;
-    background-color: var(--color-amarillo);
-    color:white;
-    padding: 10px 15px;
+.formularioTexto div{
+    width: min-content;
+    padding: 10px;
 }
-.menuDesplegable li a:hover{
-    background-color: var(--color-amarillo-hover);
-}
-.menuDesplegable > li {
-    
-}
-.menuDesplegable li ul{
-    display: none;
-    position: absolute;
-    min-width: 150px;
-}
-.menuDesplegable li:hover > ul{
-    display:block;
-}
-.menuDesplegable li ul li{
-    position:relative;
-}
-.menuDesplegable li ul li ul{
-    right:-150px;
-    top:20px;
-}
-/**/
 
-section{
-    width: 80%;
-    border: 1px solid #222;
-}
+
 
 /*Estilo de la página quienes somos*/
 .bodyquienessomos{
@@ -355,17 +299,153 @@ section{
 }
 
 
+/** Estilos para el contenido principal **/
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px 0px;
+}
+
+aside{
+    width: 20%;
+    border: 1px solid #222;
+    background-color: var(--color-amarillo);
+    color: var(--color-verde);
+}
+
+aside a{
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--color-verde);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+aside a:hover{
+    background-color: var(--color-verde);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.sectionContainer{
+
+}
+
+section{
+    width: 100%;
+}
+
+@media (min-width: 576px){
+    section{
+        width: 80%;
+    }
+}
+
+aside{
+    display: none;
+    flex-direction: column;
+}
+
+@media (min-width: 576px){
+    aside{
+        display: flex;
+    }
+}
+
+.menuDesplegable li a{
+    display:block;
+    background-color: var(--color-amarillo);
+    color:white;
+    padding: 10px 15px;
+}
+.menuDesplegable li a:hover{
+    background-color: var(--color-amarillo-hover);
+}
+.menuDesplegable > li {
+    
+}
+.menuDesplegable li ul{
+    display: none;
+    position: absolute;
+    min-width: 150px;
+}
+.menuDesplegable li:hover > ul{
+    display:block;
+}
+.menuDesplegable li ul li{
+    position:relative;
+}
+.menuDesplegable li ul li ul{
+    right:-150px;
+    top:20px;
+}
+/**/
+
 /** Estilos para los productos **/
 .sectionContainer{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin: 0px 20px;
+    justify-content: space-evenly;
+    padding: 15px;
 }
 
 .productoContainer{
-    width: 200px;
-    border: 1px solid #222;
+    width: 42%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px #0000001a, 0 2px 6px 2px #0000000d;
+    padding: 8px;
+}
+
+@media (min-width: 976px){
+    .productoContainer{
+        width: 23%;
+    }
+}
+
+@media (min-width: 1200px){
+    .productoContainer{
+        width: 18%;
+    }
+}
+
+.article, footer, header{
+    display: block;
+}
+
+.imgProducto{
+    width: 100%;
     border-radius: 5px;
-    box-shadow: 0px 5px 10px #c9c9c9;
+    cursor: pointer;
+}
+
+.nombreProducto{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-verde);
+    padding: 10px 0px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.precioProducto{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.btnAgregar{
+    width: auto;
+    color: white;
+    background-color: var(--color-verde);
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnAgregar:hover{
+    background-color: var(--color-verde-hover);
+    transition: all 0.3s ease;
 }

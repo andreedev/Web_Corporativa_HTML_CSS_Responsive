@@ -42,20 +42,38 @@
     <form action="mailto:talento@cssmarket.com" class="formulario">
         <h1 class="h1formulario">Únete al equipo de CSSMarket</h1> 
         <div class="formularioContainer">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" class="formInput" required>
-            <label for="nombre">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" class="formInput" required>
-            <br>
-            
-            <label for="direccion">Dirección:</label><br>
-            <input type="text" id="direccion" name="direccion" class="formInput" required><br>
+            <div class="formularioTexto">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="formInput" required>
+                </div>
+                <div>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" class="formInput" required>
+                </div>
+            </div>
 
-            <label for="Ciudad">Ciudad:</label><br>
-            <input type="text" id="Ciudad" name="ciudad" class="formInput" required><br>
+            <div class="formularioTexto">
+                <div>
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" class="formInput" required>
+                </div>
+                <div>
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" class="formInput" required>
+                </div>
+            </div>
 
-            <label for="cp">Código postal:</label><br>
-            <input type="text" id="cp" name="cp" class="formInput" required><br>
+            <div class="formularioTexto">
+                <div>
+                    <label for="mncp">Municipio:</label>
+                    <input type="text" id="mncp" name="mncp" class="formInput" required>
+                </div>
+                <div>
+                    <label for="cp">Código postal:</label>
+                    <input type="text" id="cp" name="cp" class="formInput" required>
+                </div>
+            </div>
 
             <label for="tlf">Teléfono:</label><br>
             <input type="text" id="tlf" name="tlf" class="formInput" required><br>
@@ -69,10 +87,13 @@
             <label for="mensaje">Mensaje:</label><br>
             <textarea id="mensaje" name="mensaje" rows="5" cols="20" placeholder="Añade algo que debamos saber de ti"></textarea><br>
 
-            <input type="checkbox" name="terminos" id="terminos" class="" required><label for="terminos"> Acepto los <a href="#">terminos</a></label><br><br>
+            <div class="formularioTexto">
+                <input type="checkbox" name="terminos" id="terminos" class="" required><label for="terminos"> Acepto los terminos</label><br>
+            </div>
+            <br>
             
-
-            <button type="submit" id="btnEnviar">Enviar</button>
+            <button type="submit" id="btnEnviar">Enviar</button><br>
+            <button type="reset" id="btnLimpiar">Limpiar</button>
         </div>
     </form>
 </body>
