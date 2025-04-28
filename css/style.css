@@ -449,3 +449,29 @@ aside{
     background-color: var(--color-verde-hover);
     transition: all 0.3s ease;
 }
+
+.localizacionh1{
+    padding:10px;
+}
+.localizacionContainer{
+    display:flex;
+    flex-direction:column;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 110px;
+    width:100vw;
+    background-color: rgb(234, 234, 234);
+    position:relative
+}
+.inputBuscar{
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #787878;
+}
+.buscarBtn{
+    padding:10px;
+    text-align: center;
+    color:var(--color-verde);
+    background-color: var(--color-amarillo);
+    border-radius: 10px;
+}
