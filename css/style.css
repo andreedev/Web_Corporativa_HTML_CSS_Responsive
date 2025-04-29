@@ -339,9 +339,15 @@ textarea{
 /** Estilos para el contenido principal **/
 .mainContainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     margin: 0px 0px;
+}
+
+@media (min-width: 576px){
+    .mainContainer{
+        flex-direction: row;
+    }
 }
 
 aside{
@@ -367,7 +373,7 @@ aside a:hover{
 }
 
 aside{
-    display: none;
+    display: block;
     flex-direction: column;
 }
 
@@ -378,8 +384,29 @@ aside{
 }
 
 .menu{
-    display: block;
+    display: none;
     color:white;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 576px){
+    .menu{
+        display: block;
+    }
+}
+
+.menuMovilIcon{
+    text-align: center;
+}
+
+.menuMovilContainer{
+    display: block;
+}
+
+@media (min-width: 576px){
+    .menuMovilContainer{
+        display: none;
+    }
 }
 
 .item{

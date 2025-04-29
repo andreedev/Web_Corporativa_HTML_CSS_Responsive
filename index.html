@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Market</title>
+    <title>CSS Market - Supermercado</title>
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Agregamos la librería Jquery de Javascript que vimos en clase para el menu responsive -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -43,6 +45,9 @@
     </nav>
     <div class="mainContainer">
         <aside>
+            <div class="menuMovilContainer">
+                <a class="menuMovilIcon" href="#">&#9776;</a>
+            </div>
             <div class="menu">
                 <div class="item">
                     <div>Bollería</div>
@@ -176,7 +181,7 @@
                 </header>
                 <article>
                     <p class="nombreProducto">Patatas finas prefritas Patatas Unidas Dia bolsa 1 Kg</p>
-                    <p class="precioProducto">1,93 €</p>
+                    <p class="precioProducto">1,94 €</p>
                 </article>
                 <footer>
                     <div class="btnAgregar">
@@ -312,6 +317,21 @@
     <footer>
         <pre><a href="#" class="text-blue">Política de privacidad</a>     |     <a href="#" class="text-blue">Política de cookies</a>    |     <a href="#" class="text-blue">Aviso legal</a>     |     <a href="#" class="text-blue">Condiciones de compra</a></pre>
     </footer>
+
+    <!-- Utilizamos el código Javascript que vimos en clase para hacer un menu responsive -->
+    <script>
+        $(function() {
+            $(".menuMovilContainer").click(function() {
+                $(".menu").toggle();
+            });
+            $(window).resize(function() {
+                let anchura = $(this).width();
+                if (anchura > 576) {
+                    $(".menu").fadeIn();
+                }
+            });
+        }); 
+     </script>
 </body>
 
 </html>
