@@ -422,6 +422,10 @@ aside{
     display: block;
 }
 
+.subitem:hover > .subitemsContainer{
+    display: block;
+}
+
 /** Estilos para los productos **/
 .sectionContainer{
     width: 100%;
