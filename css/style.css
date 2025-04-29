@@ -178,6 +178,8 @@ a{
 }
 
 /* Estilos para el formulario */
+
+/* Diseño del formulario */
 .formulario{
     color: var(--color-verde);
     background-color: var(--color-amarillo);
@@ -190,13 +192,18 @@ a{
 
 }
 
+/* Para que el diseño de todos los imput sean iguales. */
 .formInput{
+    display: flex;
+    flex-direction: row;
     width: auto;
     padding: 10px;
     margin: 10px 0px;
     border-radius: 5px;
     border: 1px solid #222;
 }
+
+/* Diseño para especificamente el textarea */
 textarea{
     width: 100%;
     padding: 10px;
@@ -204,6 +211,8 @@ textarea{
     border-radius: 5px;
     border: 1px solid #222;
 }
+
+/* Esto es para que el formulario sea responsive */
 .formularioContainer{
     position: relative;
     margin:20px;
