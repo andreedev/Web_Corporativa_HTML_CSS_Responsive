@@ -576,6 +576,13 @@ aside{
 pre{
     margin: 5px;
     text-align: center;
+    font-size: 10px;
+}
+
+@media (min-width: 576px){
+    pre{
+        font-size: 12px;
+    }
 }
 
 .text-blue{
