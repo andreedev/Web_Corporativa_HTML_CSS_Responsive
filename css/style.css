@@ -355,6 +355,8 @@ aside{
     border-right: 1px solid #222;
     background-color: var(--color-amarillo);
     color: var(--color-verde);
+    display: block;
+    flex-direction: column;
 }
 
 aside a{
@@ -372,10 +374,7 @@ aside a:hover{
     transition: all 0.3s ease;
 }
 
-aside{
-    display: block;
-    flex-direction: column;
-}
+
 
 @media (min-width: 576px){
     aside{
