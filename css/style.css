@@ -331,7 +331,7 @@ textarea{
 
 aside{
     width: 20%;
-    border: 1px solid #222;
+    border-right: 1px solid #222;
     background-color: var(--color-amarillo);
     color: var(--color-verde);
 }
@@ -351,10 +351,6 @@ aside a:hover{
     transition: all 0.3s ease;
 }
 
-.sectionContainer{
-
-}
-
 section{
     width: 100%;
 }
@@ -372,37 +368,47 @@ aside{
 
 @media (min-width: 576px){
     aside{
-        display: flex;
+        display: block;
     }
 }
 
-.menuDesplegable li a{
-    display:block;
+.menu{
+    display: block;
     background-color: var(--color-amarillo);
     color:white;
-    padding: 10px 15px;
 }
-.menuDesplegable li a:hover{
-    background-color: var(--color-amarillo-hover);
+
+.item{
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--color-verde);
+    position: relative;
+    cursor: pointer;
 }
-.menuDesplegable > li {
-    
-}
-.menuDesplegable li ul{
-    display: none;
+
+.subitemsContainer{
     position: absolute;
-    min-width: 150px;
+    top: 0px;
+    left: 100%;
+    z-index: 10;
+    border: 1px solid var(--color-verde);
+    border-bottom: none;
+    display: none;
 }
-.menuDesplegable li:hover > ul{
-    display:block;
+
+.subitem{
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--color-verde);
+    background-color: var(--color-amarillo);
+    position: relative;
+    cursor: pointer;
 }
-.menuDesplegable li ul li{
-    position:relative;
+
+.item:hover > .subitemsContainer{
+    display: block;
 }
-.menuDesplegable li ul li ul{
-    right:-150px;
-    top:20px;
-}
+
 /**/
 
 /** Estilos para los productos **/
@@ -438,6 +444,10 @@ aside{
     display: block;
 }
 
+.productoContainer footer{
+    text-align: center;
+}
+
 .imgProducto{
     width: 100%;
     border-radius: 5px;
@@ -459,17 +469,27 @@ aside{
 }
 
 .btnAgregar{
-    width: auto;
+    width: max-content;
     color: white;
     background-color: var(--color-verde);
     padding: 10px 15px;
     border-radius: 10px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .btnAgregar:hover{
     background-color: var(--color-verde-hover);
     transition: all 0.3s ease;
+}
+
+.iconoAgregar{
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
 }
 
 .localizacionh1{
