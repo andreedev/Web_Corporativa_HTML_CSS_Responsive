@@ -516,11 +516,13 @@ aside{
 
 /** Estilos para la sección de localización **/
 
-
+/* Margen al h1 */
 .localizacionh1{
     padding:20px;
     margin:10px;
 }
+
+/* Estilo del buscador */
 .localizacionContainer{
     display: flex;
     flex-direction: column;
@@ -535,6 +537,7 @@ aside{
     padding:10px;
 }
 
+/* En caso de que se haga pequeña la pantalla que el bloque buscador mantenga margen */
 @media (min-width: 500px){
     .localizacionContainer{
         width:80%;
@@ -547,11 +550,15 @@ aside{
     }
     
 }
+
+/* Estilo del input de búsqueda */
 .inputBuscar{
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #787878;
 }
+
+/* Estilo del botón de búsqueda */
 .buscarBtn{
     padding:10px;
     text-align: center;
@@ -560,6 +567,17 @@ aside{
     border-radius: 10px;
     cursor:pointer;
 }
+
+/* Margen para el mapa */
 .mapContainer{
     margin:20px;
+}
+
+pre{
+    margin: 5px;
+    text-align: center;
+}
+
+.text-blue{
+    color: blue;
 }
