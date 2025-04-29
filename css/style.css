@@ -365,7 +365,6 @@ aside a{
     border-bottom: 1px solid var(--color-verde);
     color: white;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 aside a:hover{
@@ -373,8 +372,6 @@ aside a:hover{
     color: white;
     transition: all 0.3s ease;
 }
-
-
 
 @media (min-width: 576px){
     aside{
