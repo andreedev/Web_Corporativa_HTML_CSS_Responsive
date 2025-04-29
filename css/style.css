@@ -601,7 +601,7 @@ aside{
 }
 
 pre{
-    margin: 5px;
+    padding: 5px;
     text-align: center;
     font-size: 9px;
 }
@@ -614,4 +614,8 @@ pre{
 
 .text-blue{
     color: blue;
+}
+
+.footerContainer{
+    background-color: white;
 }
