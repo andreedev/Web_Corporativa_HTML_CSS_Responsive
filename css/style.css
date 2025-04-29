@@ -364,7 +364,6 @@ aside{
 
 .menu{
     display: block;
-    background-color: var(--color-amarillo);
     color:white;
 }
 
@@ -374,6 +373,11 @@ aside{
     border-bottom: 1px solid var(--color-verde);
     position: relative;
     cursor: pointer;
+    background-color: var(--color-amarillo);
+}
+
+.item:hover{
+    background-color: var(--color-amarillo-hover);
 }
 
 .subitemsContainer{
@@ -393,6 +397,10 @@ aside{
     background-color: var(--color-amarillo);
     position: relative;
     cursor: pointer;
+}
+
+.subitem:hover{
+    background-color: var(--color-amarillo-hover);
 }
 
 .item:hover > .subitemsContainer{
