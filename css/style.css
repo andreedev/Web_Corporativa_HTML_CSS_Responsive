@@ -568,3 +568,12 @@ aside{
 .mapContainer{
     margin:20px;
 }
+
+pre{
+    margin: 5px;
+    text-align: center;
+}
+
+.text-blue{
+    color: blue;
+}
