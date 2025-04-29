@@ -227,9 +227,16 @@ textarea{
 /* Agrupar algunos imput para que estos estén al mismo nivel  */
 .formularioTexto{
     width:100%;
-    display:flex;
-    flex-direction: row;
+    display:block;
     justify-content: space-evenly;
+}
+
+@media (min-width: 576px){
+    .formularioTexto{
+        display:flex;
+        flex-direction: row;
+    }
+    
 }
 
 /* Para que se ajuste al contorno */
