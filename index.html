@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
     <header class="headerContainer">
         <div class="logoContainer">
             <img src="img/logo2.svg" class="logo">
@@ -332,6 +335,44 @@
             });
         }); 
      </script>
+
+
+
+<script>
+    alert("Bienvenido a Sevilla")
+    var nombre=prompt("¿Cómo te llamas?");
+    var apellidos=prompt("¿Cómo te apellidas?");
+    var edad=prompt("¿Cuál es tu edad?");
+
+    if (edad<=18){
+        mensaje="Eres menor de edad. No deberías andar solo por Sevilla";
+        alert("Por edad " + mensaje);
+        window.location.href="https://www.google.com";
+    }else{
+        mensaje="Eres mayor de edad";
+
+    }
+
+    var resp = confirm("Muchas gracias por la información, ¿desea continuar y mostrar su información?");
+    if (resp == true){
+        alert("Al final mostraremos tus datos por pantalla");
+    }else{
+        alert("Se acabó");
+        window.location.href="https://www.google.com";
+    }
+
+    //alert("Hola MR." + nombre);
+    //alert("Tu edad es "+edad);
+    //alert("Por edad " + mensaje);
+    
+    document.write("<h1>Hola " + nombre + " bienvenido a Sevilla</h1>");
+    let sumaredad=parseInt(edad)+5;
+    document.write("<h2>Tu edad dentro de 5 años será " + (edad+"5") + "</h2>");
+    document.write("<h3>Tu edad dentro de 5 años será " + sumaredad + "</h3>");
+    </script>
+
+<!-- document.write: muestra en el documento lo  que escribas -->
+
 </body>
 
 </html>
